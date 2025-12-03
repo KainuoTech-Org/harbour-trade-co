@@ -111,16 +111,18 @@ export default function ContactPage() {
                     </div>
 
                     {/* Map Placeholder */}
-                    <div className="w-full h-[300px] bg-slate-100 rounded-xl overflow-hidden border border-slate-200 relative group">
-                         <div 
-                            className="absolute inset-0 bg-cover bg-center grayscale group-hover:grayscale-0 transition-all duration-500"
-                            style={{ backgroundImage: 'url("/images/contact-map.jpg")' }}
-                        />
-                        <div className="absolute inset-0 flex items-center justify-center bg-black/10 group-hover:bg-transparent transition-colors">
-                             <div className="bg-white/90 backdrop-blur px-4 py-2 rounded-full text-xs font-bold text-primary shadow-lg flex items-center gap-2">
-                                <MapPin className="w-3 h-3" /> Kowloon Bay, HK
-                             </div>
-                        </div>
+                    <div className="w-full h-[300px] bg-slate-100 rounded-xl overflow-hidden border border-slate-200 relative shadow-md">
+                         <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3690.967666632642!2d114.20363337586558!3d22.31693797967477!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34040106a3655555%3A0x550176959062072a!2sEnterprise%20Square!5e0!3m2!1sen!2shk!4v1709620000000!5m2!1sen!2shk"
+                            width="100%" 
+                            height="100%" 
+                            style={{ border: 0 }} 
+                            allowFullScreen={true} 
+                            loading="lazy" 
+                            referrerPolicy="no-referrer-when-downgrade"
+                            title="Harbour Trade Co. Office Location"
+                            className="grayscale hover:grayscale-0 transition-all duration-500"
+                         ></iframe>
                     </div>
                 </div>
             </div>
