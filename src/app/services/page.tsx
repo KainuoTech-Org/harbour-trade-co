@@ -3,6 +3,7 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Separator } from "@/components/ui/separator";
 import { ArrowRight, Box, ClipboardCheck, Container, Factory, Globe, Search, Ship } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function ServicesPage() {
   return (
@@ -44,9 +45,11 @@ export default function ServicesPage() {
                      </Link>
                 </div>
                 <div className="w-full md:w-1/2 bg-slate-100 rounded-2xl h-[350px] relative overflow-hidden shadow-lg">
-                    <div 
-                        className="absolute inset-0 bg-cover bg-center"
-                        style={{ backgroundImage: 'url("/images/service-sourcing.jpg")' }}
+                    <Image
+                        src="/images/service-sourcing.jpg"
+                        alt="Sourcing negotiation"
+                        fill
+                        className="object-cover"
                     />
                 </div>
             </div>
@@ -76,9 +79,11 @@ export default function ServicesPage() {
                      </Link>
                 </div>
                 <div className="w-full md:w-1/2 bg-slate-100 rounded-2xl h-[350px] relative overflow-hidden shadow-lg">
-                     <div 
-                        className="absolute inset-0 bg-cover bg-center"
-                        style={{ backgroundImage: 'url("/images/service-qc.jpg")' }}
+                     <Image
+                        src="/images/service-qc.jpg"
+                        alt="Quality Control Inspection"
+                        fill
+                        className="object-cover"
                     />
                 </div>
             </div>
@@ -108,9 +113,11 @@ export default function ServicesPage() {
                      </Link>
                 </div>
                 <div className="w-full md:w-1/2 bg-slate-100 rounded-2xl h-[350px] relative overflow-hidden shadow-lg">
-                    <div 
-                        className="absolute inset-0 bg-cover bg-center"
-                        style={{ backgroundImage: 'url("/images/service-logistics.jpg")' }}
+                    <Image
+                        src="/images/service-logistics.jpg"
+                        alt="Logistics and Shipping"
+                        fill
+                        className="object-cover"
                     />
                 </div>
             </div>

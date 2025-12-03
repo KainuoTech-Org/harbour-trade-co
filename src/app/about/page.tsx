@@ -34,10 +34,12 @@ export default function AboutPage() {
               </div>
             </div>
             <div className="relative h-[400px] rounded-2xl overflow-hidden shadow-xl">
-               <div 
-                className="absolute inset-0 bg-cover bg-center"
-                style={{ backgroundImage: 'url("/images/about-story.jpg")' }}
-                />
+               <Image
+                src="/images/about-story.jpg"
+                alt="Harbour Trade Co. History"
+                fill
+                className="object-cover"
+               />
             </div>
           </div>
         </div>

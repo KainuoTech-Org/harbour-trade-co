@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ArrowRight, Anchor, Globe, ShieldCheck, Truck } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 import { FadeIn } from "@/components/ui/fade-in";
 
 export default function Home() {
@@ -9,9 +10,12 @@ export default function Home() {
     <div className="flex flex-col min-h-screen">
       {/* Hero Section */}
       <section className="relative h-[600px] flex items-center justify-center overflow-hidden bg-slate-900 text-white">
-        <div 
-            className="absolute inset-0 z-0 opacity-40 bg-cover bg-center"
-            style={{ backgroundImage: 'url("/images/hero-bg.jpg")' }}
+        <Image
+          src="/images/hero-bg.jpg"
+          alt="Global Logistics Hub"
+          fill
+          className="absolute inset-0 z-0 object-cover opacity-40"
+          priority
         />
         <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/50 to-transparent z-0" />
         
@@ -155,10 +159,12 @@ export default function Home() {
                   </div>
                   <FadeIn direction="left" delay={0.4}>
                     <div className="relative h-[500px] rounded-2xl overflow-hidden shadow-2xl border-4 border-white/10">
-                        <div 
-                            className="absolute inset-0 bg-cover bg-center hover:scale-105 transition-transform duration-700"
-                            style={{ backgroundImage: 'url("/images/why-us.jpg")' }}
-                            />
+                        <Image
+                          src="/images/why-us.jpg"
+                          alt="Hong Kong Port"
+                          fill
+                          className="object-cover hover:scale-105 transition-transform duration-700"
+                        />
                         <div className="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent"></div>
                         <div className="absolute bottom-8 left-8 right-8">
                             <div className="bg-white/10 backdrop-blur-md p-6 rounded-xl border border-white/20">
