@@ -53,7 +53,7 @@ export function FloatingContact() {
         <Link href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
           <Button
             size="icon"
-            className="h-12 w-12 rounded-full bg-gradient-to-tr from-[#f09433] via-[#bc1888] to-[#285AEB] text-white shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer border-0"
+            className="h-12 w-12 rounded-full bg-[#E1306C] text-white shadow-lg hover:bg-[#C13584] hover:shadow-xl transition-all duration-300 cursor-pointer"
             title="Follow us on Instagram"
           >
             <FaInstagram className="h-6 w-6" />
