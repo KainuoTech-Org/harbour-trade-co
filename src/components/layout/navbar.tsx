@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import {
@@ -6,13 +8,17 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { Menu, Globe } from "lucide-react";
+import { useLanguage } from "@/lib/LanguageContext";
+import { BookingSheet } from "@/components/layout/booking-sheet";
 
 export function Navbar() {
+  const { dict, language, toggleLanguage } = useLanguage();
+
   const navLinks = [
-    { name: "Home", href: "/" },
-    { name: "About Us", href: "/about" },
-    { name: "Services", href: "/services" },
-    { name: "Contact", href: "/contact" },
+    { name: dict.nav.home, href: "/" },
+    { name: dict.nav.about, href: "/about" },
+    { name: dict.nav.services, href: "/services" },
+    { name: dict.nav.contact, href: "/contact" },
   ];
 
   return (
@@ -43,18 +49,30 @@ export function Navbar() {
 
         {/* Right Actions */}
         <div className="hidden md:flex items-center gap-4">
-          <Button variant="ghost" size="sm" className="gap-2 text-muted-foreground hover:text-primary hover:bg-primary/5 transition-all duration-300 cursor-pointer">
+          <Button 
+            variant="ghost" 
+            size="sm" 
+            className="gap-2 text-muted-foreground hover:text-primary hover:bg-primary/5 transition-all duration-300 cursor-pointer"
+            onClick={toggleLanguage}
+          >
             <Globe className="h-4 w-4" />
-            <span>EN / 繁</span>
+            <span>{language === 'en' ? '繁' : 'EN'}</span>
           </Button>
-          <Button className="bg-secondary text-secondary-foreground hover:bg-secondary/90 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 font-medium cursor-pointer">
-            Get a Quote
-          </Button>
+          <BookingSheet trigger={
+            <Button className="bg-secondary text-secondary-foreground hover:bg-secondary/90 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 font-medium cursor-pointer">
+              {dict.booking.btn}
+            </Button>
+          } />
         </div>
 
         {/* Mobile Menu */}
         <div className="flex items-center gap-2 md:hidden">
-            <Button variant="ghost" size="icon" className="text-muted-foreground">
+            <Button 
+                variant="ghost" 
+                size="icon" 
+                className="text-muted-foreground"
+                onClick={toggleLanguage}
+            >
                  <Globe className="h-5 w-5" />
             </Button>
           <Sheet>
@@ -81,9 +99,11 @@ export function Navbar() {
                   ))}
                 </nav>
                 <div className="mt-4 flex flex-col gap-2">
-                    <Button className="w-full bg-secondary text-secondary-foreground">
-                        Get a Quote
-                    </Button>
+                    <BookingSheet trigger={
+                        <Button className="w-full bg-secondary text-secondary-foreground">
+                            {dict.booking.btn}
+                        </Button>
+                    } />
                 </div>
               </div>
             </SheetContent>

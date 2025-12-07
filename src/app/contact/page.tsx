@@ -4,6 +4,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Mail, MapPin, Phone } from "lucide-react";
+import { BookingSheet } from "@/components/layout/booking-sheet";
 
 export default function ContactPage() {
   return (
@@ -107,6 +108,16 @@ export default function ContactPage() {
                                     </div>
                                 </CardContent>
                             </Card>
+                        </div>
+
+                        <div className="mt-8 bg-slate-50 p-6 rounded-xl border border-slate-200 text-center shadow-sm">
+                            <h3 className="font-bold text-lg mb-2 text-primary">Prefer a video call or office visit?</h3>
+                            <p className="text-muted-foreground mb-4 text-sm">Schedule a dedicated time with our trade experts.</p>
+                            <BookingSheet trigger={
+                                <Button variant="outline" className="w-full border-primary text-primary hover:bg-primary hover:text-white transition-all cursor-pointer">
+                                    Schedule Appointment
+                                </Button>
+                            } />
                         </div>
                     </div>
 

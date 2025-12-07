@@ -5,6 +5,7 @@ import { Navbar } from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
 import { FloatingContact } from "@/components/layout/floating-contact";
 import { ChatBot } from "@/components/layout/chat-bot";
+import { LanguageProvider } from "@/lib/LanguageContext";
 
 const fontSans = Inter({
   variable: "--font-sans",
@@ -31,13 +32,15 @@ export default function RootLayout({
       <body
         className={`${fontSans.variable} ${fontHeading.variable} antialiased font-sans min-h-screen flex flex-col`}
       >
-        <Navbar />
-        <main className="flex-1">
-          {children}
-        </main>
-        <ChatBot />
-        <FloatingContact />
-        <Footer />
+        <LanguageProvider>
+          <Navbar />
+          <main className="flex-1">
+            {children}
+          </main>
+          <ChatBot />
+          <FloatingContact />
+          <Footer />
+        </LanguageProvider>
       </body>
     </html>
   );
