@@ -21,7 +21,7 @@ export default function ContactPage() {
 
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4 md:px-8">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
                 
                 {/* Contact Form */}
                 <div>
@@ -67,7 +67,7 @@ export default function ContactPage() {
                     </form>
                 </div>
 
-                {/* Contact Info & Map */}
+                {/* Contact Info */}
                 <div className="space-y-8">
                     <div>
                         <h2 className="text-3xl font-bold mb-6 text-primary font-heading">Contact Information</h2>
@@ -110,31 +110,34 @@ export default function ContactPage() {
                             </Card>
                         </div>
 
-                        <div className="mt-8 bg-slate-50 p-6 rounded-xl border border-slate-200 text-center shadow-sm">
-                            <h3 className="font-bold text-lg mb-2 text-primary">Prefer a video call or office visit?</h3>
-                            <p className="text-muted-foreground mb-4 text-sm">Schedule a dedicated time with our trade experts.</p>
-                            <BookingSheet trigger={
-                                <Button variant="outline" className="w-full border-primary text-primary hover:bg-primary hover:text-white transition-all cursor-pointer">
-                                    Schedule Appointment
-                                </Button>
-                            } />
-                        </div>
+                        
                     </div>
+                </div>
+            </div>
 
-                    {/* Map Placeholder */}
-                    <div className="w-full h-[300px] bg-slate-100 rounded-xl overflow-hidden border border-slate-200 relative shadow-md">
-                         <iframe 
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3690.967666632642!2d114.20363337586558!3d22.31693797967477!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34040106a3655555%3A0x550176959062072a!2sEnterprise%20Square!5e0!3m2!1sen!2shk!4v1709620000000!5m2!1sen!2shk"
-                            width="100%" 
-                            height="100%" 
-                            style={{ border: 0 }} 
-                            allowFullScreen={true} 
-                            loading="lazy" 
-                            referrerPolicy="no-referrer-when-downgrade"
-                            title="Harbour Trade Co. Office Location"
-                            className="grayscale hover:grayscale-0 transition-all duration-500"
-                         ></iframe>
-                    </div>
+            {/* Booking & Map (Full-width) */}
+            <div className="mt-12 space-y-8">
+                <div className="bg-slate-50 p-6 rounded-xl border border-slate-200 text-center shadow-sm max-w-2xl mx-auto">
+                    <h3 className="font-bold text-lg mb-2 text-primary">Prefer a video call or office visit?</h3>
+                    <p className="text-muted-foreground mb-4 text-sm">Schedule a dedicated time with our trade experts.</p>
+                    <BookingSheet trigger={
+                        <Button variant="outline" className="w-full border-primary text-primary hover:bg-primary hover:text-white transition-all cursor-pointer">
+                            Schedule Appointment
+                        </Button>
+                    } />
+                </div>
+                <div className="w-full h-[350px] bg-slate-100 rounded-xl overflow-hidden border border-slate-200 relative shadow-md">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3690.967666632642!2d114.20363337586558!3d22.31693797967477!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34040106a3655555%3A0x550176959062072a!2sEnterprise%20Square!5e0!3m2!1sen!2shk!4v1709620000000!5m2!1sen!2shk"
+                        width="100%" 
+                        height="100%" 
+                        style={{ border: 0 }} 
+                        allowFullScreen={true} 
+                        loading="lazy" 
+                        referrerPolicy="no-referrer-when-downgrade"
+                        title="Harbour Trade Co. Office Location"
+                        className="grayscale hover:grayscale-0 transition-all duration-500"
+                    ></iframe>
                 </div>
             </div>
         </div>
