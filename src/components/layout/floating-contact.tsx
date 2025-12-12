@@ -1,6 +1,6 @@
 "use client";
 
-import { FaWeixin, FaLinkedin, FaWhatsapp } from "react-icons/fa";
+import { FaWeixin, FaLinkedin, FaWhatsapp, FaFacebook } from "react-icons/fa";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
@@ -22,7 +22,7 @@ export function FloatingContact() {
         >
           <Button
             size="icon"
-            className="h-12 w-12 rounded-full bg-[#07C160] text-white shadow-lg hover:bg-[#06ad56] hover:shadow-xl transition-all duration-300 cursor-pointer"
+            className="h-12 w-12 rounded-full bg-[#07C160] text-white !shadow-none border-none ring-0 hover:bg-[#06ad56] transition-all duration-300 cursor-pointer"
             title="WeChat"
           >
             <FaWeixin className="h-6 w-6" />
@@ -42,6 +42,7 @@ export function FloatingContact() {
         </div>
       </div>
 
+      {/* LinkedIn Button */}
       <motion.div
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 1, scale: 1 }}
@@ -52,7 +53,7 @@ export function FloatingContact() {
         <Link href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
           <Button
             size="icon"
-            className="h-12 w-12 rounded-full bg-[#0077b5] text-white shadow-lg hover:bg-[#006396] hover:shadow-xl transition-all duration-300 cursor-pointer"
+            className="h-12 w-12 rounded-full bg-[#0077b5] text-white !shadow-none border-none ring-0 hover:bg-[#006396] transition-all duration-300 cursor-pointer"
             title="Connect on LinkedIn"
           >
             <FaLinkedin className="h-6 w-6" />
@@ -61,6 +62,7 @@ export function FloatingContact() {
         </Link>
       </motion.div>
 
+      {/* WhatsApp Button */}
       <motion.div
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 1, scale: 1 }}
@@ -71,11 +73,31 @@ export function FloatingContact() {
         <Link href="https://wa.me/85212345678" target="_blank" rel="noopener noreferrer">
           <Button
             size="icon"
-            className="h-14 w-14 rounded-full bg-[#25D366] text-white shadow-lg hover:bg-[#128C7E] hover:shadow-xl transition-all duration-300 cursor-pointer"
+            className="h-14 w-14 rounded-full bg-[#25D366] text-white !shadow-none border-none ring-0 hover:bg-[#128C7E] transition-all duration-300 cursor-pointer"
             title="Chat on WhatsApp"
           >
             <FaWhatsapp className="h-8 w-8" />
             <span className="sr-only">WhatsApp</span>
+          </Button>
+        </Link>
+      </motion.div>
+
+      {/* Facebook Button */}
+      <motion.div
+        initial={{ opacity: 0, scale: 0.8 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ delay: 0.8 }}
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.95 }}
+      >
+        <Link href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
+          <Button
+            size="icon"
+            className="h-12 w-12 rounded-full bg-[#1877F2] text-white !shadow-none border-none ring-0 hover:bg-[#166fe5] transition-all duration-300 cursor-pointer"
+            title="Follow us on Facebook"
+          >
+            <FaFacebook className="h-6 w-6" />
+            <span className="sr-only">Facebook</span>
           </Button>
         </Link>
       </motion.div>
