@@ -136,7 +136,7 @@ export default function ContactPage() {
                         loading="lazy" 
                         referrerPolicy="no-referrer-when-downgrade"
                         title="Harbour Trade Co. Office Location"
-                        className="grayscale hover:grayscale-0 transition-all duration-500"
+                        className="transition-all duration-500"
                     ></iframe>
                 </div>
             </div>
