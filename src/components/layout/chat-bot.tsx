@@ -78,7 +78,8 @@ export function ChatBot() {
                     <Button 
                         onClick={toggleChat}
                         size="icon" 
-                        className="h-14 w-14 rounded-full bg-primary text-primary-foreground !shadow-none border-none ring-0 hover:bg-primary/90 hover:scale-110 transition-all duration-300"
+                        className="h-14 w-14 rounded-full bg-primary text-primary-foreground !shadow-none !border-none !ring-0 hover:bg-primary/90 hover:scale-110 transition-all duration-300"
+                        style={{ boxShadow: "none", border: "none", outline: "none" }}
                     >
                         <Headset className="h-7 w-7" />
                         <span className="sr-only">Open AI Chat</span>
