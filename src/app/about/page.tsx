@@ -35,8 +35,8 @@ export default function AboutPage() {
             </div>
             <div className="relative h-[400px] rounded-2xl overflow-hidden shadow-xl">
                <Image
-                src="/images/service-sourcing.jpg"
-                alt="Harbour Trade Co. Team Sourcing"
+                src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=2671&auto=format&fit=crop"
+                alt="Harbour Trade Co. Team Meeting"
                 fill
                 className="object-cover"
                />

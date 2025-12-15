@@ -32,7 +32,7 @@ export function BookingSheet({ trigger }: { trigger?: React.ReactNode }) {
          </SheetHeader>
          <div className="flex-1 h-full w-full bg-background relative">
             <iframe 
-                src="https://calendly.com" 
+                src="https://calendly.com/trae-demo/30min?hide_event_type_details=1&hide_gdpr_banner=1" 
                 width="100%" 
                 height="100%" 
                 className="h-[calc(100vh-100px)] w-full"
